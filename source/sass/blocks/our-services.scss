@@ -1,0 +1,210 @@
+.our-services {
+  background-color: $dark;
+}
+
+.our-services__wrapper {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 90px 30px 130px;
+
+  p {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.8vw;
+    line-height: 51px;
+    font-weight: normal;
+    color: $white;
+    margin-bottom: 50px;
+  }
+}
+
+.our-services__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  li {
+    width: 19.2vw;
+    min-width: 200px;
+    min-height: 620px;
+    flex-grow: 1;
+  }
+}
+
+.our-services__service {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 53px 10px 10px 44px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  text-decoration: none;
+
+  &--production {
+    background-image: url("../img/service1-desktop.png");
+  }
+
+  &--mounting {
+    background-image: url("../img/service2-desktop.png");
+  }
+
+  &--accessories {
+    background-image: url("../img/service3-desktop.png");
+  }
+
+  h3 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: normal;
+    color: $white;
+    max-width: 190px;
+  }
+
+  .our-services__service-button {
+    width: 63px;
+    height: 63px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $blue;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 26px;
+      left: 30px;
+      width: 10px;
+      height: 8px;
+      background: url("../../img/icons/arrow-icon.svg") 50% no-repeat;
+    }
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .our-services__service {
+    &--production {
+      background-image: url("../img/service1-desktop2x.png");
+    }
+
+    &--mounting {
+      background-image: url("../img/service2-desktop2x.png");
+    }
+
+    &--accessories {
+      background-image: url("../img/service3-desktop2x.png");
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .our-services__wrapper {
+    padding: 53px 25px 75px;
+
+    p {
+      font-size: 32px;
+      line-height: 140.62%;
+    }
+  }
+
+  .our-services__list {
+    flex-direction: column;
+    gap: 45px;
+
+    li {
+      width: auto;
+      min-width: auto;
+      min-height: auto;
+      flex-grow: 1;
+    }
+  }
+
+  .our-services__service {
+    width: auto;
+    min-height: 256px;
+    padding: 40px 20px 20px 43px;
+
+    &--production {
+      background-image: url("../img/service1-tablet.png");
+    }
+
+    &--mounting {
+      background-image: url("../img/service2-tablet.png");
+    }
+
+    &--accessories {
+      background-image: url("../img/service3-tablet.png");
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    .our-services__service {
+      &--production {
+        background-image: url("../img/service1-tablet2x.png");
+      }
+
+      &--mounting {
+        background-image: url("../img/service2-tablet2x.png");
+      }
+
+      &--accessories {
+        background-image: url("../img/service3-tablet2x.png");
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .our-services__wrapper {
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 65px;
+
+    p {
+      font-size: 28px;
+      line-height: 140.62%;
+      padding-left: 10px;
+      margin-bottom: 37px;
+    }
+  }
+
+  .our-services__service {
+    padding: 23px 20px 20px 35px;
+
+    &--production {
+      background-image: url("../img/service1-mobile.png");
+    }
+
+    &--mounting {
+      background-image: url("../img/service2-mobile.png");
+    }
+
+    &--accessories {
+      background-image: url("../img/service3-mobile.png");
+    }
+  }
+
+  .our-services__list {
+    gap: 30px;
+  }
+
+  @media (min-resolution: 2dppx) {
+    .our-services__service {
+      &--production {
+        background-image: url("../img/service1-mobile2x.png");
+      }
+
+      &--mounting {
+        background-image: url("../img/service2-mobile2x.png");
+      }
+
+      &--accessories {
+        background-image: url("../img/service3-mobile2x.png");
+      }
+    }
+  }
+}

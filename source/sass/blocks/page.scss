@@ -1,0 +1,41 @@
+.page {
+font-family: "PT mono", "Arial", sans-serif;
+font-style: normal;
+font-weight: normal;
+scroll-behavior: smooth;
+height: 100%;
+}
+
+.page__body {
+  height: 100%;
+  overflow-x: hidden;
+
+  .page__body-overlay {
+    content: "";
+    position: fixed;
+    width: 1000%;
+    height: 1000%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 99;
+    cursor: pointer;
+  }
+}
+
+.page__wrapper {
+min-height: 100%;
+display: flex;
+flex-direction: column;
+}
+
+.page__body--scroll-disabled {
+overflow: hidden;
+}
+
+.page__main {
+flex: 1 1 auto;
+}
+
