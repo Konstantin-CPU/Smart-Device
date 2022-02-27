@@ -75,12 +75,3 @@ window.addEventListener("load", function() {
     let mask = new IMask(input, maskOptions);
   })
 })
-
-
-//   let reg = /[A-Za-zА-яа-яЁё]/g;
-
-
-//   telInput.addEventListener("input", function() {
-//   this.value = this.value.replace(reg, "");
-// });
-

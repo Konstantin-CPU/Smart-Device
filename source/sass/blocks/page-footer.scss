@@ -34,6 +34,7 @@
 
 .page-footer__socials {
   margin-right: 15.5%;
+
   p {
     display: none;
   }
@@ -161,6 +162,7 @@ hr {
     padding-left: 27px;
     padding-right: 27px;
     justify-content: space-between;
+
     p.paragraph--should-hide {
       display: none;
     }
@@ -238,7 +240,8 @@ hr {
         margin: 0;
       }
 
-      ul, p {
+      ul,
+      p {
         display: none;
       }
 

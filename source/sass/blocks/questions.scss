@@ -7,7 +7,7 @@
     min-height: 50px;
     background-color: $white-opacity;
     color: $white;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -27,7 +27,7 @@
     padding: 13px 16px;
     background-color: $white-opacity;
     color: $white;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -118,13 +118,13 @@
 
 .questions__agreement-checkbox {
   label {
-  position: relative;
-  padding-left: 32px;
-  cursor: pointer;
-  font-size: 14px;
-  line-height: 16px;
-  color: $white;
-  display: inline-block;
+    position: relative;
+    padding-left: 32px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 16px;
+    color: $white;
+    display: inline-block;
 
     &::before {
       content: "";
@@ -137,20 +137,20 @@
       border: 1px solid $white;
     }
   }
+}
 
-  input[type="checkbox"] {
-    display: none;
+.questions__agreement-checkbox-input {
+  display: none;
 
-    &:checked + label {
-      &::after {
-        content: "";
-        position: absolute;
-        width: 8px;
-        height: 5px;
-        top: 5px;
-        left: 5px;
-        background: url("../../img/icons/check-icon.svg") 50% no-repeat;
-      }
+  &:checked + label {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 5px;
+      top: 5px;
+      left: 5px;
+      background: url("../../img/icons/check-icon.svg") 50% no-repeat;
     }
   }
 }
@@ -159,6 +159,15 @@
   .questions {
     &::before {
       display: none;
+    }
+
+    textarea {
+      min-height: 160px;
+    }
+
+    input[type="submit"] {
+      max-width: 280px;
+      padding-bottom: 10px;
     }
   }
 
@@ -179,17 +188,6 @@
 
     p {
       margin-bottom: 53px;
-    }
-  }
-
-  .questions {
-    textarea {
-      min-height: 160px;
-    }
-
-    input[type="submit"] {
-      max-width: 280px;
-      padding-bottom: 10px;
     }
   }
 }
