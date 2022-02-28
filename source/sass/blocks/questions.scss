@@ -2,64 +2,6 @@
   background-color: $blue;
   position: relative;
 
-  input[type="text"] {
-    flex-grow: 1;
-    min-height: 50px;
-    background-color: $white-opacity;
-    color: $white;
-    font-family: "PT Mono", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    border: 0;
-    outline: 0;
-    padding: 14px 15px;
-
-    &::placeholder {
-      color: $white;
-    }
-  }
-
-  textarea {
-    width: 100%;
-    min-height: 154px;
-    padding: 13px 16px;
-    background-color: $white-opacity;
-    color: $white;
-    font-family: "PT Mono", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    border: 0;
-    outline: 0;
-    margin-bottom: 43px;
-
-    &::placeholder {
-      color: $white;
-    }
-  }
-
-  input[type="submit"] {
-    border: 1px solid $white;
-    border-radius: 5px;
-    background-color: transparent;
-    padding: 14px 18px 8px;
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: bold;
-    color: $white;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    flex-grow: 1;
-    max-width: 270px;
-    min-height: 45px;
-    cursor: pointer;
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -89,7 +31,7 @@
     font-size: 36px;
     line-height: 51px;
     color: $white;
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: normal;
     margin-bottom: 10px;
   }
@@ -118,40 +60,7 @@
 
 .questions__agreement-checkbox {
   label {
-    position: relative;
     padding-left: 32px;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 16px;
-    color: $white;
-    display: inline-block;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      top: 0;
-      left: 0;
-      background-color: transparent;
-      border: 1px solid $white;
-    }
-  }
-}
-
-.questions__agreement-checkbox-input {
-  display: none;
-
-  &:checked + label {
-    &::after {
-      content: "";
-      position: absolute;
-      width: 8px;
-      height: 5px;
-      top: 5px;
-      left: 5px;
-      background: url("../../img/icons/check-icon.svg") 50% no-repeat;
-    }
   }
 }
 

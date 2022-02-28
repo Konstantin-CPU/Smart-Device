@@ -34,8 +34,9 @@
   }
 
   h3 {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 24px;
+    font-weight: normal;
     line-height: 34px;
     margin-bottom: 15px;
     color: $blue;
@@ -72,9 +73,10 @@
 .advantages__info {
   padding-left: 180px;
   position: relative;
+  color: $black;
 
   h2 {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 36px;
     line-height: 51px;
     color: $black;
@@ -106,7 +108,7 @@
   }
 }
 
-.advantages__button {
+.advantages__link {
   display: block;
   width: 180px;
   min-height: 45px;
@@ -116,13 +118,22 @@
   border: 1px solid $blue;
   color: $blue;
   border-radius: 5px;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   cursor: pointer;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    font-size: 16px;
+    opacity: 0.8;
+    background-color: $blue;
+    color: $white;
+  }
 }
 
 @media (min-resolution: 2dppx) {
@@ -275,7 +286,7 @@
     }
   }
 
-  .advantages__button {
+  .advantages__link {
     margin-top: -10px;
   }
 }

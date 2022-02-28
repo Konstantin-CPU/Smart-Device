@@ -31,6 +31,11 @@
   &:not(:last-child) {
     margin-right: 8.5%;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .page-header__icon {
@@ -40,10 +45,15 @@
 .page-header__logo {
   display: block;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .page-header__toggle {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
@@ -56,6 +66,12 @@
   height: 45px;
   margin-left: 40px;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    font-size: 16px;
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: $tablet-width) {

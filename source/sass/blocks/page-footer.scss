@@ -12,11 +12,11 @@
 
 .page-footer__main-part {
   display: flex;
-  padding-bottom: 50px;
+  padding-bottom: 58px;
   position: relative;
 
   h2 {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-weight: normal;
     font-size: 15px;
     line-height: 16px;
@@ -25,11 +25,27 @@
     color: $dark;
     margin-bottom: 25px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 200vw;
+    height: 1px;
+    bottom: 0;
+    left: -100%;
+    background-color: $grey;
+    opacity: 0.5;
+  }
 }
 
 .page-footer__logo {
   display: block;
   margin-bottom: 52px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 }
 
 .page-footer__socials {
@@ -44,6 +60,31 @@
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.page-footer__social-icon {
+  fill: $icon-color;
+}
+
+.page-footer__social-icon--vk {
+  &:hover,
+  &:focus {
+    fill: $vk-color;
+  }
+}
+
+.page-footer__social-icon--ok {
+  &:hover,
+  &:focus {
+    fill: $ok-color;
+  }
+}
+
+.page-footer__social-icon--facebook {
+  &:hover,
+  &:focus {
+    fill: $fb-color;
+  }
 }
 
 .page-footer__info-lists {
@@ -63,6 +104,12 @@
     font-size: 15px;
     line-height: 25px;
     opacity: 0.5;
+
+    &:hover,
+    &:focus {
+      color: $classic-black;
+      opacity: 1;
+    }
   }
 }
 
@@ -70,7 +117,7 @@
   margin-left: auto;
   max-width: 333px;
 
-  .page-footer__contact-container {
+  p {
     color: $dark;
     font-size: 15px;
     line-height: 25px;
@@ -79,15 +126,17 @@
 
   a {
     color: $dark;
-  }
-}
+    display: block;
+    opacity: 0.5;
+    font-size: 15px;
+    line-height: 25px;
 
-hr {
-  position: absolute;
-  left: 0;
-  width: 100vw;
-  opacity: 0.2;
-  background-color: $grey;
+    &:hover,
+    &:focus {
+      color: $classic-black;
+      opacity: 1;
+    }
+  }
 }
 
 .page-footer__rights {
@@ -97,16 +146,30 @@ hr {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $dark;
-  opacity: 0.5;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   justify-content: space-around;
-  padding: 25px 0 15px;
+  padding: 15px 0 15px;
+
+  p {
+    opacity: 0.5;
+  }
 
   a {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: $dark;
-    display: block;
+    opacity: 0.5;
+
+    &:hover,
+    &:focus {
+      color: $classic-black;
+      opacity: 1;
+    }
   }
 }
 
@@ -149,7 +212,7 @@ hr {
   }
 
   .page-footer__info-lists {
-    padding: 38px 35px 33px 27px;
+    padding: 38px 35px 38px 27px;
   }
 
   .page-footer__navigation-list {
@@ -159,8 +222,7 @@ hr {
   }
 
   .page-footer__rights {
-    padding-left: 27px;
-    padding-right: 27px;
+    padding: 20px 27px 15px 27px;
     justify-content: space-between;
 
     p.paragraph--should-hide {
@@ -170,9 +232,9 @@ hr {
 }
 
 @media (max-width: $mobile-width) {
-  .page-footer {
-    hr {
-      display: none;
+  .page-footer__main-part {
+    &::before {
+      opacity: 0;
     }
   }
 

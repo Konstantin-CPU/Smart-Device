@@ -55,28 +55,28 @@
         <h2 class="heading visually-hidden">Про нас</h2>
           <ul class="advantages__list list">
             <li class="advantages__advantage">
-              <svg class="advantages__icon advantage__icon--clock" width="29" height="35">
+              <svg class="advantages__icon" width="29" height="35">
                 <use xlink:href="img/icons/sprite.svg#stopwatch-icon"></use>
               </svg>
               <h3 class="heading">Оперативные сроки</h3>
               <p class="paragraph">Усовершенствованная логистическая система позволяет нам просчиттывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки</p>
             </li>
             <li class="advantages__advantage">
-              <svg class="advantages__icon advantage__icon--crew" width="35" height="35">
+              <svg class="advantages__icon" width="35" height="35">
                 <use xlink:href="img/icons/sprite.svg#crew-icon"></use>
               </svg>
               <h3 class="heading">Крупные поставщики</h3>
               <p class="paragraph">Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.</p>
             </li>
             <li class="advantages__advantage">
-              <svg class="advantages__icon advantage__icon--detective" width="36" height="31">
+              <svg class="advantages__icon" width="36" height="31">
                 <use xlink:href="img/icons/sprite.svg#detective-icon"></use>
               </svg>
               <h3 class="heading">Полная конфиденциальность</h3>
               <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
             </li>
             <li class="advantages__advantage">
-              <svg class="advantages__icon advantage__icon--discount" width="35" height="35">
+              <svg class="advantages__icon" width="35" height="35">
                 <use xlink:href="img/icons/sprite.svg#discount-icon"></use>
               </svg>
               <h3 class="heading">Персонализация стоимости</h3>
@@ -85,12 +85,11 @@
           </ul>
         <div class="advantages__info">
           <h2 class="heading">О компании</h2>
-          <input type="checkbox" id="info-paragraph">
           <div class="advantages__text-box">
             <p class="paragraph">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
             <p class="paragraph">Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE,  HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
           </div>
-          <label class="advantages__button button" for="info-paragraph">Подробнее</label>
+          <a href="#" class="advantages__link">Подробнее</a>
         </div>
       </div>
     </section>
@@ -100,38 +99,37 @@
         <p class="paragraph">Service Device предлагает следующие товары и услуги</p>
         <ul class="our-services__list list">
           <li>
-            <a href="#" class="our-services__service our-services__service--production">
+            <a class="our-services__service our-services__service--production">
               <h3 class="heading">Производство печатных плат</h3>
-              <button class="our-services__service-button button"><span class="visually-hidden">Подробнее о этой услуге</span></button>
             </a>
           </li>
           <li>
-            <a href="#" class="our-services__service our-services__service--mounting">
-            <h3 class="heading">Монтаж печатных плат</h3>
-            <button class="our-services__service-button button"><span class="visually-hidden">Подробнее о этой услуге</span></button>
-          </a></li>
+            <a class="our-services__service our-services__service--mounting">
+              <h3 class="heading">Монтаж печатных плат</h3>
+            </a>
+          </li>
           <li>
-            <a href="#" class="our-services__service our-services__service--accessories">
-            <h3 class="heading">Комплектующие для светотехники</h3>
-            <button class="our-services__service-button button"><span class="visually-hidden">Подробнее о этой услуге</span></button>
-          </a></li>
+            <a class="our-services__service our-services__service--accessories">
+              <h3 class="heading">Комплектующие для светотехники</h3>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
-    <form class="questions" id="questions" action="">
+    <form class="form questions" id="questions" action="">
       <div class="questions__wrapper">
         <div class="questions__container">
           <h3 class="heading">Остались вопросы? Задайте их нам!</h3>
           <p class="paragraph">Мы проконсультируем Вас бесплатно</p>
           <div class="questions__input-container">
-            <input type="text" name="name" placeholder="Имя">
-            <input class="telephone-input" type="text" name="tel" placeholder="Телефон">
+            <input type="text" name="name" placeholder="Имя" required="">
+            <input class="telephone-input telephone-input--questions" type="tel" name="tel" placeholder="Телефон" required="">
           </div>
-          <textarea name="question" placeholder="Ваш вопрос"></textarea>
+          <textarea name="question" placeholder="Ваш вопрос" required=""></textarea>
           <div class="questions__agreement-block">
             <input type="submit" name="submit" value="Задать вопрос">
-            <div class="questions__agreement-checkbox">
-              <input class="questions__agreement-checkbox-input" type="checkbox" id="agree">
+            <div class="form__agreement-checkbox questions__agreement-checkbox">
+              <input class="form__agreement-checkbox-input" type="checkbox" id="agree">
               <label for="agree">Я согласен на обработку<br> персональных данных</label>
             </div>
           </div>
@@ -149,22 +147,22 @@
           <p class="paragraph">1999-2018 SD Service Devices</p>
           <ul class="page-footer__socials-list list">
             <li>
-              <a href="#">
-                <svg class="page-footer__social-icon" width="27" height="27">
+              <a href="#" aria-label="Мы на Фейсбуке">
+                <svg class="page-footer__social-icon page-footer__social-icon--facebook" width="27" height="27">
                   <use xlink:href="img/icons/sprite.svg#facebook-icon"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="#">
-                <svg class="page-footer__social-icon" width="27" height="27">
+              <a href="#" aria-label="Мы в Одноклассниках">
+                <svg class="page-footer__social-icon page-footer__social-icon--ok" width="27" height="27">
                   <use xlink:href="img/icons/sprite.svg#ok-icon"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="#">
-                <svg class="page-footer__social-icon" width="27" height="27">
+              <a href="#" aria-label="Мы во Вконтакте">
+                <svg class="page-footer__social-icon page-footer__social-icon--vk" width="27" height="27">
                   <use xlink:href="img/icons/sprite.svg#vk-icon"></use>
                 </svg>
               </a>
@@ -215,7 +213,6 @@
           </div>
         </div>
       </div>
-      <hr>
       <div class="page-footer__rights">
         <p class="paragraph paragraph--should-hide">Все права защищены</p>
         <p class="paragraph paragraph--should-hide">1999-2018 SD Service Devices</p>
@@ -224,20 +221,19 @@
       </div>
     </div>
   </footer>
-  <form class="popup-form visually-hidden" id="popup-form" action="">
+  <form class="form popup-form visually-hidden" id="popup-form" action="">
     <button class="popup-form__toggle"><span class="visually-hidden">Открыть/закрыть</span></button>
     <h2 class="heading">Закажите звонок</h2>
     <p class="paragraph">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-    <input type="text" id="popup-name" name="name" placeholder="Имя" required="">
-    <input class="telephone-input" type="text" id="popup-tel" name="tel" placeholder="Телефон" required="">
+    <input type="text" class="popup-form__name" name="name" placeholder="Имя" required="">
+    <input class="telephone-input telephone-input--popup" type="tel" id="popup-tel" name="tel" placeholder="Телефон" required="">
     <textarea id="popup-question" name="question" placeholder="Ваш вопрос" required=""></textarea>
     <input type="submit" form="popup-form">
-    <div class="popup-form__agreement-checkbox">
-      <input class="popup-from__agreement-checkbox-input visually-hidden" id="popup-agree" type="checkbox" required="">
+    <div class="form__agreement-checkbox popup-form__agreement-checkbox">
+      <input class="form__agreement-checkbox-input visually-hidden" id="popup-agree" type="checkbox" required="">
       <label for="popup-agree">Я согласен на обработку персональных данных</label>
     </div>
   </form>
   <script type="module" src="js/main.js"></script>
-  <script src="https://unpkg.com/imask"></script>
 </body>
 </html>

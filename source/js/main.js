@@ -1,5 +1,7 @@
 'use strict';
 
+import "./vendor.js"
+
 window.addEventListener("load", function() {
   document.querySelectorAll(".page-footer__accordion-item").forEach(element => {
       element.classList.remove("page-footer__accordion-item--active");
@@ -25,32 +27,38 @@ window.addEventListener("load", function() {
     });
   });
 
-  const popupForm = document.querySelector(".popup-form");
-
   const pageHeaderToggle = document.querySelector(".page-header__toggle");
-  pageHeaderToggle.addEventListener("click", function() {
-    popupForm.classList.remove("visually-hidden");
-    document.querySelector(".page__body-overlay").classList.remove("visually-hidden");
-    document.querySelector(".popup-form__name").focus();
-  })
-
+  const popupForm = document.querySelector(".popup-form");
   const popupFormToggle = document.querySelector(".popup-form__toggle");
-  popupFormToggle.addEventListener("click", function() {
-    document.querySelector(".popup-form").classList.add("visually-hidden");
-    document.querySelector(".page__body-overlay").classList.add("visually-hidden");
-  })
 
-  document.addEventListener('keydown', (evt) => {
-    if (evt.key === 'Esc' || evt.key === 'Escape') {
-      popupForm.classList.add("visually-hidden");
+  if (popupFormToggle && popupForm) {
+    pageHeaderToggle.addEventListener("click", function() {
+      popupForm.classList.remove("visually-hidden");
+      document.querySelector(".page__body-overlay").classList.remove("visually-hidden");
+      document.querySelector(".popup-form__name").focus();
+    })
+
+    popupFormToggle.addEventListener("click", function() {
+      document.querySelector(".popup-form").classList.add("visually-hidden");
       document.querySelector(".page__body-overlay").classList.add("visually-hidden");
-    }
-  })
+    })
 
-  document.querySelector(".page__body-overlay").addEventListener("click", function() {
-    document.querySelector(".page__body-overlay").classList.add("visually-hidden");
-    popupForm.classList.add("visually-hidden");
-  })
+    document.addEventListener('keydown', (evt) => {
+      if (evt.key === 'Esc' || evt.key === 'Escape') {
+        popupForm.classList.add("visually-hidden");
+        document.querySelector(".page__body-overlay").classList.add("visually-hidden");
+      }
+    })
+
+    document.querySelector(".page__body-overlay").addEventListener("click", function() {
+      document.querySelector(".page__body-overlay").classList.add("visually-hidden");
+      popupForm.classList.add("visually-hidden");
+    })
+
+    popupForm.addEventListener("submit", function() {
+      saveData();
+    })
+  }
 
   function saveData() {
     let popupName = document.getElementById("popup-name").value;
@@ -62,16 +70,16 @@ window.addEventListener("load", function() {
     localStorage.setItem("userQuestion", popupQuestion);
   }
 
-  popupForm.addEventListener("submit", function() {
-    saveData();
-  })
-
   var maskOptions = {
     mask: "+7(000)000-00-00",
     lazy: false
   }
 
-  document.querySelectorAll(".telephone-input").forEach(input => {
-    let mask = new IMask(input, maskOptions);
-  })
+  if (document.querySelector(".telephone-input--popup")) {
+    let maskPopup = new IMask(document.querySelector(".telephone-input--popup"), maskOptions);
+  }
+
+  if (document.querySelector(".telephone-input--questions")) {
+    let maskQuestions = new IMask(document.querySelector(".telephone-input--questions"), maskOptions);
+  }
 })

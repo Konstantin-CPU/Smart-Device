@@ -8,7 +8,7 @@
   padding: 90px 30px 130px;
 
   p {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 1.8vw;
     line-height: 51px;
     font-weight: normal;
@@ -41,6 +41,29 @@
   background-size: cover;
   background-position: 50%;
   text-decoration: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    width: 63px;
+    height: 63px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: $blue;
+    cursor: pointer;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 26px;
+    right: 25px;
+    width: 10px;
+    height: 8px;
+    background: url("../img/icons/arrow-icon.svg") 50% no-repeat;
+    z-index: 2;
+  }
 
   &--production {
     background-image: url("../img/service1-desktop.png");
@@ -55,7 +78,7 @@
   }
 
   h3 {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto Condensed", "Arial", sans-serif;
     font-size: 20px;
     line-height: 30px;
     font-weight: normal;
@@ -63,23 +86,10 @@
     max-width: 190px;
   }
 
-  .our-services__service-button {
-    width: 63px;
-    height: 63px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-color: $blue;
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 26px;
-      left: 30px;
-      width: 10px;
-      height: 8px;
-      background: url("../../img/icons/arrow-icon.svg") 50% no-repeat;
+  &:hover,
+  &:focus {
+    h3 {
+      opacity: 0.8;
     }
   }
 }
