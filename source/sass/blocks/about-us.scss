@@ -1,5 +1,5 @@
 .about-us {
-  background-image: url("../img/main-background-desktop.png");
+  background-image: url("../img/main-background-desktop.webp");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -92,20 +92,19 @@
 
   &:hover,
   &:focus {
-    font-size: 17px;
     opacity: 0.8;
   }
 }
 
 @media (min-resolution: 2dppx) {
   .about-us {
-    background-image: url("../img/main-background-desktop2x.png");
+    background-image: url("../img/main-background-desktop2x.webp");
   }
 }
 
 @media (max-width: $tablet-width) {
   .about-us {
-    background-image: url("../img/main-background-tablet.png");
+    background-image: url("../img/main-background-tablet.webp");
 
     &::before {
       width: 528px;
@@ -150,23 +149,18 @@
   .about-us__button {
     margin-left: 50px;
     width: 380px;
-
-    &:hover,
-    &:focus {
-      font-size: 16px;
-    }
   }
 
   @media (min-resolution: 2dppx) {
     .about-us {
-      background-image: url("../img/main-background-tablet2x.png");
+      background-image: url("../img/main-background-tablet2x.webp");
     }
   }
 }
 
 @media (max-width: $mobile-width) {
   .about-us {
-    background-image: url("../img/main-background-mobile.png");
+    background-image: url("../img/main-background-mobile.webp");
 
     &::before {
       width: 505px;

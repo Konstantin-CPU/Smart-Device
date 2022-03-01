@@ -62,7 +62,7 @@
   border: 1px solid $white;
   border-radius: 5px;
   line-height: 16px;
-  width: 180px;
+  min-width: 180px;
   height: 45px;
   margin-left: 40px;
   cursor: pointer;
@@ -89,8 +89,13 @@
     }
   }
 
+  .page-header__navigation {
+    padding-left: 20px;
+  }
+
   .page-header__toggle {
     display: none;
+    min-width: none;
   }
 
   .page-header__icon {

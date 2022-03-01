@@ -2,6 +2,7 @@
   font-family: "PT Mono";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local(""),
     url("../fonts/pt-mono-v11-latin_cyrillic-regular.woff2") format("woff2"),
     url("../fonts/pt-mono-v11-latin_cyrillic-regular.woff") format("woff");
@@ -11,6 +12,7 @@
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: local(""),
     url("../fonts/roboto-condensed-v24-latin_cyrillic-300.woff2") format("woff2"),
     url("../fonts/roboto-condensed-v24-latin_cyrillic-300.woff") format("woff");
@@ -20,6 +22,7 @@
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local(""),
     url("../fonts/roboto-condensed-v24-latin_cyrillic-regular.woff2") format("woff2"),
     url("../fonts/roboto-condensed-v24-latin_cyrillic-regular.woff") format("woff");
@@ -29,6 +32,7 @@
   font-family: "Roboto Condensed";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: local(""),
     url("../fonts/roboto-condensed-v24-latin_cyrillic-700.woff2") format("woff2"),
     url("../fonts/roboto-condensed-v24-latin_cyrillic-700.woff") format("woff");

@@ -102,7 +102,7 @@
     height: 317px;
     top: 0;
     left: -30px;
-    background-image: url("../img/2005-desktop.png");
+    background-image: url("../img/2005-desktop.webp");
     background-position: 50%;
     background-repeat: no-repeat;
   }
@@ -139,7 +139,7 @@
 @media (min-resolution: 2dppx) {
   .advantages__info {
     &::before {
-      background-image: url("../img/2005-desktop2x.png");
+      background-image: url("../img/2005-desktop2x.webp");
     }
   }
 }
@@ -202,7 +202,7 @@
       width: 251px;
       height: 361px;
       top: -5px;
-      background-image: url("../img/2005-tablet.png");
+      background-image: url("../img/2005-tablet.webp");
     }
   }
 
@@ -220,7 +220,7 @@
   @media (min-resolution: 2dppx) {
     .advantages__info {
       &::before {
-        background-image: url("../img/2005-tablet2x.png");
+        background-image: url("../img/2005-tablet2x.webp");
       }
     }
   }

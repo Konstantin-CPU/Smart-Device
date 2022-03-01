@@ -116,20 +116,20 @@
         </ul>
       </div>
     </section>
-    <form class="form questions" id="questions" action="">
+    <form class="form questions" id="questions" action="https://echo.htmlacademy.ru/">
       <div class="questions__wrapper">
         <div class="questions__container">
           <h3 class="heading">Остались вопросы? Задайте их нам!</h3>
           <p class="paragraph">Мы проконсультируем Вас бесплатно</p>
           <div class="questions__input-container">
-            <input type="text" name="name" placeholder="Имя" required>
-            <input class="telephone-input telephone-input--questions" type="tel" name="tel" placeholder="Телефон" required>
+            <input type="text" name="name" id="questions-name" placeholder="Имя" required>
+            <input class="telephone-input telephone-input--questions" id="questions-tel" type="tel" |name="tel" placeholder="Телефон" required>
           </div>
-          <textarea name="question" placeholder="Ваш вопрос" required></textarea>
+          <textarea name="question" placeholder="Ваш вопрос" id="questions-question" required></textarea>
           <div class="questions__agreement-block">
             <input type="submit" name="submit" value="Задать вопрос">
             <div class="form__agreement-checkbox questions__agreement-checkbox">
-              <input class="form__agreement-checkbox-input" type="checkbox" id="agree">
+              <input class="form__agreement-checkbox-input" type="checkbox" id="agree" required>
               <label for="agree">Я согласен на обработку<br> персональных данных</label>
             </div>
           </div>
@@ -173,17 +173,21 @@
           <nav class="page-footer__navigation page-footer__accordion-item page-footer__accordion-item--active">
             <h2 class="heading">Разделы сайта</h2>
             <ul class="page-footer__navigation-list list">
-              <div class="page-footer__navigation-column">
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Продукты</a></li>
-                <li><a href="#">Производство печатных плат</a></li>
-                <li><a href="#">Монтаж печатных плат</a></li>
-              </div>
-              <div class="page-footer__navigation-column">
-                <li><a href="#">Комплектующие</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Контакты</a></li>
-              </div>
+              <li>
+                <ul class="page-footer__navigation-column list">
+                  <li><a href="#">О компании</a></li>
+                  <li><a href="#">Продукты</a></li>
+                  <li><a href="#">Производство печатных плат</a></li>
+                  <li><a href="#">Монтаж печатных плат</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul class="page-footer__navigation-column list">
+                  <li><a href="#">Комплектующие</a></li>
+                  <li><a href="#">Доставка</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </li>
             </ul>
             <button class="page-footer__toggle"><span class="visually-hidden">Открыть/закрыть</span></button>
           </nav>
@@ -221,7 +225,7 @@
       </div>
     </div>
   </footer>
-  <form class="form popup-form visually-hidden" id="popup-form" action="">
+  <form class="form popup-form visually-hidden" id="popup-form" action="https://echo.htmlacademy.ru/">
     <button class="popup-form__toggle"><span class="visually-hidden">Открыть/закрыть</span></button>
     <h2 class="heading">Закажите звонок</h2>
     <p class="paragraph">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
