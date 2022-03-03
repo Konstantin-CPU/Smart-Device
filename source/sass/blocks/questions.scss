@@ -48,14 +48,26 @@
 .questions__input-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
   margin-bottom: 40px;
+
+  input {
+    &:nth-child(2n-1) {
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .questions__agreement-block {
   display: flex;
   align-items: center;
-  gap: 38px;
+
+  input[type="submit"] {
+    margin-right: 38px;
+  }
 }
 
 .questions__agreement-checkbox {
@@ -83,7 +95,7 @@
   .questions__wrapper {
     display: block;
     width: 100%;
-    padding: 83px 88px 105px;
+    padding: 83px 88px 105px 93px;
   }
 
   .questions__container {
@@ -93,23 +105,34 @@
       font-size: 32px;
       line-height: 140.62%;
       margin-bottom: 15px;
+      margin-top: -5px;
+      margin-left: -5px;
     }
 
     p {
-      margin-bottom: 53px;
+      margin-bottom: 58px;
+    }
+  }
+
+  .questions__input-container {
+    input {
+      &:nth-child(2n-1) {
+        margin-right: 32px;
+      }
     }
   }
 }
 
 @media (max-width: $mobile-width) {
   .questions__wrapper {
-    padding: 33px 15px 40px;
+    padding: 33px 15px 43px;
   }
 
   .questions__container {
     h3 {
       font-size: 28px;
       line-height: 140.62%;
+      margin-left: 0;
     }
 
     p {
@@ -118,14 +141,21 @@
   }
 
   .questions__input-container {
-    gap: 32px;
     margin-bottom: 30px;
+    flex-direction: column;
+
+    input {
+      &:nth-child(2n-1) {
+        margin-right: 0;
+        margin-bottom: 32px;
+      }
+    }
   }
 
   .questions {
     textarea {
-      min-height: 109px;
-      margin-bottom: 25px;
+      min-height: 105px;
+      margin-bottom: 30px;
     }
 
     input[type="submit"] {
@@ -139,7 +169,11 @@
     max-width: 290px;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+
+    input[type="submit"] {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   .questions__agreement-checkbox {

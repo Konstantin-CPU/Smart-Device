@@ -15,17 +15,25 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-bottom: 105px;
+  margin-bottom: 75px;
 }
 
 .advantages__advantage {
-  width: 570px;
+  width: 29.6vw;
   min-height: 300px;
   padding: 43px 45px 50px;
   border: 1px solid $light-grey;
   border-left: 3px solid $blue;
   background-color: $white;
+  margin-bottom: 30px;
+
+  &:nth-child(2n-1) {
+    margin-right: 30px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   .advantages__icon {
     margin-bottom: 15px;
@@ -105,6 +113,7 @@
     background-image: url("../img/2005-desktop.webp");
     background-position: 50%;
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -144,6 +153,16 @@
   }
 }
 
+@media (max-width: 1285px) {
+  .advantages__list {
+    padding: 0 10px;
+  }
+
+  .advantages__advantage {
+    width: 380px;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .advantages {
     background: none;
@@ -169,7 +188,8 @@
   }
 
   .advantages__list {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+    padding: 0;
   }
 
   .advantages__advantage {
@@ -243,11 +263,18 @@
   }
 
   .advantages__list {
-    gap: 20px;
+    flex-direction: column;
+    margin-bottom: 42px;
   }
 
   .advantages__advantage {
     padding: 26px 10px 24px 26px;
+    width: auto;
+    margin-bottom: 20px;
+
+    &:nth-child(2n-1) {
+      margin-right: 0;
+    }
 
     .advantages__icon {
       margin-bottom: 5px;
@@ -277,7 +304,8 @@
   }
 
   .advantages__text-box {
-    height: 350px;
+    height: auto;
+    max-height: 345px;
 
     p {
       &:first-child {
@@ -287,6 +315,12 @@
   }
 
   .advantages__link {
-    margin-top: -10px;
+    margin-top: -5px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .advantages__advantage {
+    width: 570px;
   }
 }

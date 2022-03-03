@@ -11,15 +11,14 @@
   margin: 0 auto;
   padding: 34px 20px 0;
   display: flex;
-  align-items: center;
 }
 
 .page-header__navigation {
-  width: auto;
+  width: 440px;
+  margin-left: auto;
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
-  justify-content: flex-end;
+  align-items: center;
 }
 
 .page-header__link {
@@ -27,9 +26,10 @@
   font-size: 16px;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  padding-left: 20px;
 
   &:not(:last-child) {
-    margin-right: 8.5%;
+    margin-right: auto;
   }
 
   &:hover,
@@ -66,6 +66,7 @@
   height: 45px;
   margin-left: 40px;
   cursor: pointer;
+  letter-spacing: 0.05em;
 
   &:hover,
   &:focus {
@@ -80,6 +81,10 @@
   }
 
   .page-header__link {
+    align-self: center;
+    padding: 0;
+    margin: 0;
+
     span {
       display: none;
     }
@@ -90,7 +95,7 @@
   }
 
   .page-header__navigation {
-    padding-left: 20px;
+    width: auto;
   }
 
   .page-header__toggle {
@@ -115,7 +120,7 @@
 
 @media (max-width: $mobile-width) {
   .page-header__wrapper {
-    padding: 20px 20px 0;
+    padding: 20px 15px 0;
   }
 
   .page-header__logo img {
@@ -124,8 +129,10 @@
   }
 
   .page-header__link {
+    margin-top: -5px;
+
     &:not(:last-child) {
-      margin-right: 15px;
+      margin-right: 25px;
     }
   }
 }

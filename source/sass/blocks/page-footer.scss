@@ -2,6 +2,7 @@
   background-color: $light;
   overflow: hidden;
   position: relative;
+  flex: 0 0 auto;
 }
 
 .page-footer__wrapper {
@@ -59,7 +60,12 @@
 .page-footer__socials-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
 }
 
 .page-footer__social-icon {
@@ -95,8 +101,6 @@
 .page-footer__navigation-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 70px;
-  margin-right: 20px;
 
   a {
     text-decoration: none;
@@ -113,9 +117,13 @@
   }
 }
 
+.page-footer__navigation-column {
+  margin-right: 75px;
+}
+
 .page-footer__contact {
   margin-left: auto;
-  max-width: 333px;
+  min-width: 333px;
 
   p {
     color: $dark;
@@ -148,12 +156,15 @@
   color: $dark;
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
   justify-content: space-around;
   padding: 15px 0 15px;
 
   p {
     opacity: 0.5;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 
   a {
@@ -217,7 +228,6 @@
 
   .page-footer__navigation-list {
     margin: 0;
-    gap: 0;
     flex-direction: column;
   }
 
@@ -240,7 +250,7 @@
 
   .page-footer__socials {
     flex-direction: column;
-    padding: 45px 20px 50px;
+    padding: 45px 20px 47px;
 
     .page-footer__logo {
       margin-bottom: 26px;
@@ -286,10 +296,17 @@
 
   .page-footer__accordion-item {
     position: relative;
-    padding: 29px 20px;
+    padding: 30px 20px 25px 15px;
     border-bottom: 1px solid $grey-transparent;
+    cursor: pointer;
 
     &--active {
+      padding-bottom: 30px;
+
+      h2 {
+        margin-bottom: 30px;
+      }
+
       .page-footer__toggle {
         &::before {
           display: block;
@@ -319,13 +336,20 @@
   .page-footer__contact {
     margin: 0;
     max-width: 100%;
+    min-width: unset;
   }
 
   .page-footer__rights {
     flex-direction: column;
     justify-content: stretch;
     align-items: center;
-    gap: 20px;
     padding: 25px 20px;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+    }
   }
 }

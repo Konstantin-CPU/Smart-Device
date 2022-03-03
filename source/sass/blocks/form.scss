@@ -38,6 +38,7 @@
     border: 0;
     outline: 0;
     margin-bottom: 43px;
+    resize: none;
 
     &::placeholder {
       color: $white;
@@ -88,6 +89,7 @@
     opacity: 0.8;
     color: $white;
     display: inline-block;
+    vertical-align: baseline;
 
     &::before {
       content: "";
@@ -113,7 +115,7 @@
       height: 5px;
       top: 5px;
       left: 5px;
-      background: url("../../img/icons/check-icon.svg") 50% no-repeat;
+      background: url("../img/icons/check-icon.svg") 50% no-repeat;
     }
   }
 }
