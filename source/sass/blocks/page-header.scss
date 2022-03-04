@@ -29,7 +29,7 @@
   line-height: 18px;
   margin-bottom: 10px;
   margin-right: auto;
-  min-width: 140px;
+  min-width: 160px;
 
   &:last-child,
   &:nth-child(2n) {
@@ -148,7 +148,7 @@
     }
 
     &:last-child {
-      margin-right: 0;
+      margin-right: 25px;
     }
 
     &:not(:last-child) {
