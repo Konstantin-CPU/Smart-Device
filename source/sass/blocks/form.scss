@@ -79,6 +79,8 @@
 }
 
 .form__agreement-checkbox {
+  position: relative;
+
   label {
     position: relative;
     padding-left: 48px;
@@ -105,7 +107,10 @@
 }
 
 .form__agreement-checkbox-input {
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
 
   &:checked + label {
     &::after {

@@ -14,22 +14,25 @@
 }
 
 .page-header__navigation {
-  width: 440px;
+  width: 435px;
   margin-left: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .page-header__link {
   color: $white;
   font-size: 16px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  line-height: 18px;
   margin-bottom: 10px;
-  padding-left: 20px;
+  margin-right: auto;
 
-  &:not(:last-child) {
-    margin-right: auto;
+  &:last-child,
+  &:nth-child(2n) {
+    margin-right: 0;
   }
 
   &:hover,
@@ -40,6 +43,7 @@
 
 .page-header__icon {
   margin-right: 10px;
+  margin-top: 5px;
 }
 
 .page-header__logo {
@@ -64,7 +68,7 @@
   line-height: 16px;
   min-width: 180px;
   height: 45px;
-  margin-left: 40px;
+  margin-left: 45px;
   cursor: pointer;
   letter-spacing: 0.05em;
 
@@ -83,7 +87,7 @@
   .page-header__link {
     align-self: center;
     padding: 0;
-    margin: 0;
+    margin: 0 0 15px;
 
     span {
       display: none;
@@ -92,10 +96,15 @@
     &:not(:last-child) {
       margin-right: 30px;
     }
+
+    &:nth-child(8n) {
+      margin-right: 0;
+    }
   }
 
   .page-header__navigation {
-    width: auto;
+    max-width: 500px;
+    padding-top: 15px;
   }
 
   .page-header__toggle {
@@ -123,16 +132,30 @@
     padding: 20px 15px 0;
   }
 
-  .page-header__logo img {
-    width: 38px;
-    height: 38px;
+  .page-header__navigation {
+    max-width: 200px;
+    padding-top: 5px;
   }
 
   .page-header__link {
+    margin-right: 25px;
     margin-top: -5px;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     &:not(:last-child) {
       margin-right: 25px;
     }
+  }
+
+  .page-header__logo img {
+    width: 38px;
+    height: 38px;
   }
 }
